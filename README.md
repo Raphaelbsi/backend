@@ -22,8 +22,8 @@ Esta API foi desenvolvida para gerenciar clientes de uma empresa de limpeza resi
 1. Clone o repositório para sua máquina local:
 
    ```bash
-   git clone [URL_DO_REPOSITÓRIO]
-   cd [NOME_DO_DIRETÓRIO]
+   git clone https://github.com/Raphaelbsi/backend.git
+   cd backend
    ```
 
 2. Instale as dependências necessárias:
