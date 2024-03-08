@@ -1,12 +1,12 @@
 import pool from '../config/dbConfig';
 
 export interface Cliente {
-  id?: number;
+  id: number;
   nome: string;
   email: string;
   telefone: string;
-  coordenada_x?: number;
-  coordenada_y?: number;
+  coordenada_x: number;
+  coordenada_y: number;
 }
 
 class ClienteModel {
@@ -22,6 +22,18 @@ class ClienteModel {
   async listar(): Promise<Cliente[]> {
     const { rows } = await pool.query('SELECT * FROM clientes');
     return rows;
+  }
+
+  async emailExiste(email: string): Promise<boolean> {
+    const query = 'SELECT COUNT(*) FROM clientes WHERE email = $1';
+    const { rows } = await pool.query(query, [email]);
+    const count = parseInt(rows[0].count);
+    if (count > 0) {
+      return true;
+    } else {
+      return false;
+    }
+
   }
 }
 
