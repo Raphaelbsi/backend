@@ -1,0 +1,38 @@
+# Dependências
+/node_modules
+/npm-debug.log
+/yarn-error.log
+/package-lock.json
+/yarn.lock
+
+# Arquivos de build do TypeScript
+/build
+/dist
+
+# Arquivos de configuração do ambiente local
+/.env
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
+
+# Diretório de dados do Docker PostgreSQL (se você estiver versionando seu projeto com o banco de dados localmente, o que geralmente não é recomendado)
+/data/db
+
+# Arquivos específicos do editor/IDE
+/.vscode
+/.idea
+/*.sublime-workspace
+/*.sublime-project
+
+# Outros arquivos e diretórios
+.DS_Store
+Thumbs.db
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.swo
